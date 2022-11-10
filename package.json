@@ -1,18 +1,20 @@
 {
+  "homepage": "http://JessieDesiree369.github.io/lookin-4-books",
   "name": "googlebooks-app",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
-        "develop": "concurrently -n server,react \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "gh-pages": "^4.0.0"
   }
 }
